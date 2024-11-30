@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiAppConvertisseur.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiAppConvertisseur"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarIsVisible="False"
+    >
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout>
+            <Image
+               Source="menuicon.jpg"
+               WidthRequest="100">
+            </Image>
+            <Label 
+                Text="Menu Lateral"
+                HorizontalTextAlignment="Start"
+                HeightRequest="100">
+            </Label>
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="home" FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" 
+        Icon="homeicon.jpeg"/>
+        <ShellContent
+            Title="A propos"
+            ContentTemplate="{DataTemplate local:Apropos}"
+            Route="Apropos"
+            Icon="infoicon.jpeg"/>
+    </FlyoutItem>
+
+
+</Shell>
